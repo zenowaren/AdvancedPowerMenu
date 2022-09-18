@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consTaskDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/mainLayout"
+        app:layout_constraintTop_toTopOf="@id/mainLayout"
+        app:layout_constraintEnd_toEndOf="@id/mainLayout"
+        app:layout_constraintBottom_toBottomOf="@id/mainLayout">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorText"
+            android:text="@string/port"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="@id/consTaskDetails"
+            app:layout_constraintTop_toTopOf="@id/consTaskDetails"
+            app:layout_constraintBottom_toTopOf="@id/tvInfo"/>
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorText"
+            android:text="@string/port_info"
+            android:textSize="@dimen/info"
+            app:layout_constraintStart_toStartOf="@id/consTaskDetails"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintBottom_toTopOf="@id/edtPort"/>
+
+        <EditText
+            android:id="@+id/edtPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="@dimen/editTextSize"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:completionThreshold="1"
+            android:maxLength="5"
+            android:textColor="@color/colorText"
+            android:background="@drawable/rounded_rectangle"
+            app:layout_constraintStart_toStartOf="@id/consTaskDetails"
+            app:layout_constraintTop_toBottomOf="@id/tvInfo"
+            app:layout_constraintEnd_toEndOf="@id/consTaskDetails"
+            app:layout_constraintBottom_toBottomOf="@id/consTaskDetails"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
