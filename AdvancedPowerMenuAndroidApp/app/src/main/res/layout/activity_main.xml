@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMainBackground"
+    tools:context=".MainActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/consMiddle"
+                app:layout_constraintStart_toStartOf="@id/consMiddle"
+                app:layout_constraintEnd_toEndOf="@id/consMiddle"
+                app:layout_constraintBottom_toBottomOf="@id/consMiddle">
+
+                <TextView
+                    android:id="@+id/tvEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="@string/noClient"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintBottom_toBottomOf="@id/consEmpty"
+                    app:layout_constraintEnd_toEndOf="@id/consEmpty"
+                    app:layout_constraintStart_toStartOf="@id/consEmpty"
+                    app:layout_constraintTop_toTopOf="@id/consEmpty"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/pull_to_refresh"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmpty"
+                    app:layout_constraintEnd_toEndOf="@id/consEmpty"
+                    app:layout_constraintStart_toStartOf="@id/consEmpty"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conBottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/consMiddle"
+                app:layout_constraintBottom_toBottomOf="@id/consMiddle"
+                app:layout_constraintStart_toStartOf="@id/consMiddle"
+                app:layout_constraintEnd_toEndOf="@id/consMiddle">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/clientsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="@id/conBottom"
+                    app:layout_constraintTop_toTopOf="@id/conBottom"
+                    app:layout_constraintEnd_toEndOf="@id/conBottom"
+                    app:layout_constraintBottom_toBottomOf="@id/conBottom"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
