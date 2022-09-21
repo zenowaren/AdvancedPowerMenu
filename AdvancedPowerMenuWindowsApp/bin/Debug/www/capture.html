@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Take Screenshot</title>
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>.bodybackground {display: table; margin-right: auto; margin-left: auto;text-align: center;background-color: #252525;font-family: Tahoma;color: white;}.table{display: inline-block; text-align: center; margin: 0px 20px 0px 0px}.details {font-size: 20px;font-weight: bold;color: #98d66d;}.heads {font-size: 12px;color: #fff;}.top {display: flex;align-items: top;}.round{padding: 15px;border-radius: 8px;border: 2px solid #4CAF50;}.button {background-color: #669844; color: white;border-radius: 6px;border: none;padding: 10px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 17px;width: 250px;font-family:verdana; margin: 10px 0px 0px 0px;}.button:hover {background-color: #98d66d;color: #3a7a2f;}
+</style>
+</head>
+<body class="bodybackground">
+<div class="top">
+<div class="table">
+<div class="round">
+<img src="screenshot.png" alt="Screenshot">
+</div>
+</div>
+<div class="table">
+<div class="round">
+<div class="heads">Computer Name:</div>
+<div class="details">{rComputerName}</div><br>
+<div class="heads">Login User Name:</div>
+<div class="details">{rUserName}</div><br>
+<div class="heads">IP Address:</div>
+<div class="details">{rIpAddress}</div><br>
+<div class="heads">Status:</div>
+<div class="details">{rStatus}</div>
+</div><br>
+<button class="button" onclick="location.reload();">Capture Again</button><br>
+<button class="button" onclick="history.back()">Homepage</button>
+</div>
+</div>
+</body>
+</html>

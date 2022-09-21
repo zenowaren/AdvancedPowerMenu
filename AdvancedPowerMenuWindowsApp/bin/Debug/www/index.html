@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Advanced Power Menu</title>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.body {background-color: #252525;font-family: Tahoma;color: white;}
+.divMain {display: table; margin-right: auto; margin-left: auto;text-align: center;}
+.divMainTitle {font-size: 23px; font-weight: bold; margin: 20px 0px 20px 0px;}
+.divDetails {border-radius: 8px;border: 2px solid #98d66d;padding: 15px;margin: 0px 0px 30px 0px;}
+.divDetailTitle {font-size: 12px;color: #fff;}
+.divDetailInfo {font-size: 20px;font-weight: bold;color: #98d66d;}
+.divContent {width: 310px;}
+.button {background-color: #669844; color: white;border-radius: 6px;border: none;padding: 10px 32px;
+	text-align: center;text-decoration: none;display: inline-block;font-size: 17px;width: 310px;
+	font-family:verdana; margin: 0px 0px 10px 0px;}.button:hover {background-color: #98d66d;color: #3a7a2f;}
+.divAction {border-radius: 8px;background: #494949;padding: 15px;margin: 0px 0px 10px 0px;}
+.divHr {margin: 0px 2px 0px 2px;}
+.divVersion {font-size: 10px; text-align: right; margin: 5px 3px 0px 0px;}
+</style>
+</head>
+<body class="body">
+<div class="divMain">
+<div class="divMainTitle">Advanced Power Menu</div>
+<div class="divDetails">
+<div class="divDetailTitle">Computer Name:</div>
+<div class="divDetailInfo">{rComputerName}</div>
+<br>
+<div class="divDetailTitle">Login User Name:</div>
+<div class="divDetailInfo">{rUserName}</div>
+<br>
+<div class="divDetailTitle">IP Address:</div>
+<div class="divDetailInfo">{rIpAddress}</div>
+<br>
+<div class="divDetailTitle">Status:</div>
+<div class="divDetailInfo">{rStatus}</div>
+</div>
+<div class="divContent">
+<form method="GET">
+<input type="submit" class="button" id="shutdown" name="action_is" value="Shutdown"><br>
+<input type="submit" class="button" id="restart" name="action_is" value="Restart"><br>
+<input type="submit" class="button" id="lock" name="action_is" value="Lock"><br>
+<input type="submit" class="button" id="screenshot" name="action_is" value="Screenshot">
+</form>
+</div>
+<hr class="divHr">
+<div class="divVersion">APM v1.0.5 by Venovar</div>
+</div>
+</body>
+</html>
